@@ -34,8 +34,11 @@ const Layout = ({ children, data }) => (
             width: '100%'
           }}
         >
-          {children}
+          <main>
+            {children}
+          </main>
         </div>
+        <footer>footer</footer>
       </>
     )}
   />
