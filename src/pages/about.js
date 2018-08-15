@@ -4,15 +4,15 @@ import Layout from '../components/layout'
 
 const AboutPage = () => (
   <Layout>
-    <main style={{
-      'padding': '2rem'
-    }}>
+    <main>
     <h2>About </h2>
-    <p>I'm a web developer, with 2 years of experience working as a full-stack dev. I've recently forayed into user experience, working with a major retailer for their e-commerce team. Though I love working with UXers, I really miss coding and actually getting to work on the technical issues, and creating these great experiences for end users.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sequi provident quisquam odit consequuntur facilis iste assumenda cupiditate nesciunt possimus soluta culpa asperiores quam, molestiae, pariatur vero laudantium rem amet.
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi soluta ratione voluptatum, dolore perspiciatis, animi facere nesciunt necessitatibus, aperiam provident doloremque, voluptatibus esse. Distinctio eligendi expedita, esse dolorum quas cupiditate.</p>
 
     <h2>Stack</h2>
     <p>
-      As a dev, I've mostly worked on full stack projects in python and javascript. Most of the tools I've used are:</p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum assumenda fugiat quos dolorem id amet ex nihil vero placeat. Repellat quos voluptate, excepturi cum molestiae natus nihil pariatur ullam autem.</p>
       <ul>
         <li>Python: Django MVT framework, Django REST framework, testing</li>
         <li>Older JavaScript: ES5 (aka vanilla Javascript, plain JS), jquery</li>

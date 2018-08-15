@@ -4,9 +4,7 @@ import Layout from '../components/layout'
 
 const ContactPage = () => (
   <Layout>
-    <main style={{
-      'padding': '2rem'
-    }}>
+    <main>
       <h2>Contact</h2>
       <p>If you'd like to get in touch, please you can find me at:</p>
       <ul>
