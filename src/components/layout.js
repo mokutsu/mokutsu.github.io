@@ -34,7 +34,7 @@ const Layout = ({ children, data }) => (
             width: '100%'
           }}
         >
-          <main style={{'padding': '2rem'}}>
+          <main>
             {children}
           </main>
         </div>

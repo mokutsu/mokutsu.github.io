@@ -26,16 +26,11 @@ class Header extends React.Component {
   render() {
     return (
       <header
-        style={{
-          marginBottom: '1.45rem'
-        }}
         className={this.state.scrolled ? "scrolled-header" : "full-header"}
       >
         <div
           style={{
-            margin: '0 auto',
-            padding: '1.45rem 1.0875rem 0',
-          }}
+            margin: '0 auto',}}
         >
           <h1 style={{ margin: 0 }}>
             <Link
