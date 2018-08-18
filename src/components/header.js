@@ -8,25 +8,25 @@ class Header extends React.Component {
       scrolled: false
     };
   }
-  componentDidMount() {
-    console.log(this)
-    window.addEventListener('scroll', this.handleScroll.bind(this));
-    console.log('added')
-  }
-  componentWillUnmount() {
-        console.log(this)
-    window.removeEventListener('scroll', this.handleScroll.bind(this));
-    console.log('removed')
-  }
+  // componentDidMount() {
+  //   console.log(this)
+  //   window.addEventListener('scroll', this.handleScroll.bind(this));
+  //   console.log('added')
+  // }
+  // componentWillUnmount() {
+  //       console.log(this)
+  //   window.removeEventListener('scroll', this.handleScroll.bind(this));
+  //   console.log('removed')
+  // }
   handleScroll(e) {
         console.log(this)
     console.log('handle scroll')
-    this.setState({scrolled: true});
+    // this.setState({scrolled: true});
   }
   render() {
     return (
       <header
-        className={this.state.scrolled ? "scrolled-header" : "full-header"}
+        className={this.state.scrolled ? "global-header scrolled-header" : "global-header full-header"}
       >
         <div
           style={{

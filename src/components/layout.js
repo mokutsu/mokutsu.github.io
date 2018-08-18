@@ -29,10 +29,6 @@ const Layout = ({ children, data }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           className='main-container'
-          style={{
-            margin: '0 auto',
-            width: '100%'
-          }}
         >
           <main>
             {children}
