@@ -5,77 +5,92 @@ class ProjectSection extends React.Component {
     super(props);
     this.state = {
       activeProject: {
-        name: 'G Adventures',
-        stack: 'JavaScript',
-        description: ''
+        name: '',
+        stack: '',
+        description: '',
       },
       allProjects: [
-
+        {
+          name: 'The Home Depot',
+          position: 'UX Analyst',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'G Adventures',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'BizXPro',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'BlackOut',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'Wild Fork Foods',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'City Explorer',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'Walk This Way',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'Chris Tam',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        }
       ]
     };
   }
-
+  onClick(index) {
+    console.log("click")
+    console.log(this.props)
+    console.log(index)
+    console.log(this.state.allProjects[index])
+    this.setState({activeProject: this.state.allProjects[index]})
+  }
   render() {
     return (
       <section className='proj'>
-        <h2>What I've been working on</h2>
+        <h2>Works & Projects</h2>
         <div className='main-box'>
+          ACTIVE PROJECT HERE
           <h3>{this.state.activeProject.name}</h3>
           <p>{this.state.activeProject.stack}</p>
           <p>{this.state.activeProject.description}</p>
         </div>
         <section className='projects-list'>
-            <section className='projects pro-1'>
-              The Home Depot
-              <section>
-
+          {this.state.allProjects.map((proj, index) => {
+            return (
+              <section className={`projects proj-${index} ${this.state.activeProject.name == proj.name && "active"}`} onClick={() => this.onClick(index)} proj='hd' key={index}>
+                {proj.name}
+                {proj.position}
+                {proj.stack}
               </section>
-            </section>
-
-
-            <section className='projects pro-2'>
-              G Adventures
-              <section>
-
-              </section>
-            </section>
-
-            <section className='projects pro-3'>
-              BizXPro
-            </section>
-
-            <section className='projects pro-4'>
-              Blackout
-            </section>
-
-            <section className='projects pro-5'>
-              City Explorer
-            </section>
-
-            <section className='projects pro-6'>
-              Wild Fork Foods
-            </section>
-
-            <section className='projects pro-7'>
-              Vision Quest
-            </section>
-
-
-            <section className='projects pro-8'>
-              Chris Tam
-            </section>
-
-
-            <section className='projects pro-9'>
-              Walk This Way
-              <section>
-
-              </section>
-            </section>
-
-
-          </section>
+            )
+          })}
         </section>
+        </section>
+
     )
   }
 }
