@@ -4,6 +4,9 @@ import Layout from '../components/layout'
 
 const AboutPage = () => (
   <Layout>
+
+    yes by Por Suppasit from the Noun Project
+    
     <main>
     <h2>About </h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sequi provident quisquam odit consequuntur facilis iste assumenda cupiditate nesciunt possimus soluta culpa asperiores quam, molestiae, pariatur vero laudantium rem amet.
