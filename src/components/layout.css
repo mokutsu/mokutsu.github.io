@@ -145,10 +145,7 @@ header h1 ,h2 {
 .proj {
   border-top: 2px solid black;
 }
-.proj h2 {
-  font-size: 4rem;
-  text-align: center;
-}
+
 .header-text-h1 {
   font-size: 5rem;
   padding: 1rem;
@@ -196,8 +193,9 @@ div.subtext {
 .projects, .projects-2 {
   background-color: white;
   color: black;
-  width: 33%;
+  /*width: 33%;*/
   height: 200px;
+  flex-grow: 1;
   border:1px solid black;
 }
 .global-header {
@@ -233,25 +231,36 @@ div.subtext {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-
+.projects-demo {
+  display: flex;
+  align-items: stretch;
+}
+.proj h2 {
+  font-size: 4rem;
+  text-align: center;
+}
 .main-box {
-  width: 66%;
+  width: 50%;
   border:2px solid black;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 1rem;
 }
+
 .projects-list {
   display: flex;
   flex-wrap: wrap;
+  width: 50%;
 }
-.pro-1, .pro-4 {
-  width: 30%;
-}
-.pro-2, .pro-3 {
-  width: 60%;
-}
-.pro-5{
 
+.proj-0, .proj-3, .proj-4, .proj-5 {
+  width: 33%;
+}
+.proj-1  {
+  width: 66%;
+}
+
+.proj-6, .proj-7{
+  width: 49%;
 }
 
 @media screen and (max-width: 540px) {

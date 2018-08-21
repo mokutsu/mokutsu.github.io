@@ -63,7 +63,7 @@ class Header extends React.Component {
                     color: 'black',
                     textDecoration: 'none',
                   }}
-                >about
+                >About
                 </Link>
               </li>
 
@@ -74,7 +74,7 @@ class Header extends React.Component {
                       color: 'black',
                       textDecoration: 'none',
                     }}
-                  >contact
+                  >Contact
                   </Link>
               </li>
             </ul>
