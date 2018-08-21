@@ -6,7 +6,7 @@ class ProjectSection extends React.Component {
     this.state = {
       activeProject: {
         name: '',
-        stack: '',
+        stack: [],
         description: '',
       },
       allProjects: [
@@ -57,6 +57,12 @@ class ProjectSection extends React.Component {
           position: 'Full-Stack Developer',
           stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
+        },
+        {
+          name: 'Other',
+          position: 'Full-Stack Developer',
+          stack: ['ux', 'ux strategy', 'information architecture', 'taxonomy', 'web analytics', 'heat maps', 'clicktale', 'ab testing'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere aliquam sint delectus, veritatis totam odio voluptatem neque animi. Sapiente molestiae eaque saepe, natus eligendi. Ea aut omnis, accusantium sapiente.'
         }
       ]
     };
@@ -76,16 +82,18 @@ class ProjectSection extends React.Component {
           <div className='main-box'>
             ACTIVE PROJECT HERE
             <h3>{this.state.activeProject.name}</h3>
-            <p>{this.state.activeProject.stack}</p>
+            <p>{this.state.activeProject.stack.map((skill, index) => {
+              return (<span className='stack-skill'>{skill}</span>)
+            })}</p>
             <p>{this.state.activeProject.description}</p>
           </div>
           <section className='projects-list'>
             {this.state.allProjects.map((proj, index) => {
               return (
                 <section className={`projects proj-${index} ${this.state.activeProject.name == proj.name && "active"}`} onClick={() => this.onClick(index)} proj='hd' key={index}>
-                  {proj.name}
-                  {proj.position}
-                  {proj.stack}
+                  <h4>{proj.name}</h4>
+                  {/* {proj.position}
+                  {proj.stack} */}
                 </section>
               )
             })}

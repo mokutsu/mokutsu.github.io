@@ -139,6 +139,9 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     /*transform: translate(33%);*/
 }
+.banner-img img {
+  min-height: 100%;
+}
 header h1 ,h2 {
     font-family: 'Megrim';
 }
@@ -168,6 +171,15 @@ div.subtext {
     display: flex;
     justify-content: center;
     overflow: hidden;
+}
+.stack-skill {
+  border: 1px solid #eee;
+  border-radius: 2px;
+  margin: 0.1rem 0.3rem;
+  padding: 0.3rem;
+}
+.img-container img {
+  min-height: 100%;
 }
 .test-img {
   /*min-height: 100%;*/
