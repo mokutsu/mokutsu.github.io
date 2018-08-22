@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .intro-header {
   display: flex;
-  padding-top:50px;
+  padding-top:40px;
 }
 .header-pt {
   display: flex;
@@ -172,6 +172,11 @@ div.subtext {
     justify-content: center;
     overflow: hidden;
 }
+.main-container {
+  max-width: 1200px;
+  margin:0 auto;
+  border: 2px solid black;
+}
 .stack-skill {
   border: 1px solid #eee;
   border-radius: 2px;
@@ -202,13 +207,24 @@ div.subtext {
   z-index: 2;
   padding: 0 3rem;
 }
+.skills {
+  display:flex;
+  flex-flow: wrap;
+}
 .projects, .projects-2 {
   background-color: white;
   color: black;
-  /*width: 33%;*/
-  height: 200px;
-  flex-grow: 1;
   border:1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 8rem;
+  min-width: 8rem;
+  flex-grow: 1;
+}
+.projects:hover {
+  text-decoration: underline;
 }
 .global-header {
   background-color: white; color: black;
@@ -246,34 +262,59 @@ div.subtext {
 .projects-demo {
   display: flex;
   align-items: stretch;
+  /*flex-flow: column;*/
 }
 .proj h2 {
   font-size: 4rem;
   text-align: center;
 }
 .main-box {
-  width: 50%;
+  width:100%;
   border:2px solid black;
   padding: 1rem;
-  margin: 0 1rem;
+  /*margin: 0 1rem;*/
+  transition: 1s all;
+  overflow: hidden;
 }
+.main-box {
+  height: 0;
+  padding: 0;
+}
+/*.main-box.open {
+  height: 10rem;
+  padding: 1rem;
+}*/
 
 .projects-list {
+  height: 300px;
+  display: flex;
+  /*flex-direction: column;*/
+  flex-wrap: wrap;
+}
+.projects .project-detail {
+  height:0;
+  overflow: hidden;
+}
+.projects.active .project-detail {
+  /*height:300px;*/
+}
+p.skills-list {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
 }
-
-.proj-0, .proj-3, .proj-4, .proj-5 {
-  width: 33%;
-}
-.proj-1  {
-  width: 66%;
-}
-
-.proj-6, .proj-7{
-  width: 49%;
-}
+/*
+.proj-0, .proj-1 {
+  /*width: 50%;*/
+  /*flex-grow: 1;*/
+/*}*/
+/*.proj-2, .proj-4 {*/
+  /*width:50%;*/
+  /*flex-grow: 2;
+}*/
+/*.proj-3, .proj-5 {*/
+  /*width: 25%;*/
+  /*flex-grow: 1;
+}*/
 
 @media screen and (max-width: 540px) {
   .header-text {
