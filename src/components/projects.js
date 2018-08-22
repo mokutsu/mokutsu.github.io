@@ -104,17 +104,17 @@ class ProjectSection extends React.Component {
     return (
       <section className='proj'>
         <h2>Works & Projects</h2>
-          <section className={`projects-list ${this.state.activeProject.name == ''? 'collapse' : 'open'}`}>
+          <section className={`projects-list`}>
             {this.state.allProjects.map((proj, index) => {
               return (
                 <section className={`projects proj-${index} ${this.state.activeProject.name == proj.name && "active"}`} onClick={() => this.onClick(index)} proj='hd' key={index}>
                   <h4>{proj.name}</h4>
                   <div className='project-detail'>
-                    <p className='skills-list'>{this.state.activeProject.stack.map((skill, index) => {
-                      return (<span className='stack-skill'>{skill}</span>)
+                    <p className='skills-list'>{proj.stack.map((skill, index) => {
+                      return (<span className='stack-skill' key={index}>{skill}</span>)
                     })}</p>
 
-                    <p>{this.state.activeProject.description}</p>
+                    <p>{proj.description}</p>
                   </div>
                 </section>
               )

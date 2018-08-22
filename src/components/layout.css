@@ -211,17 +211,32 @@ div.subtext {
   display:flex;
   flex-flow: wrap;
 }
-.projects, .projects-2 {
+.projects {
   background-color: white;
   color: black;
   border:1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  min-height: 8rem;
-  min-width: 8rem;
   flex-grow: 1;
+  display: flex;
+  flex-align: center;
+  justify-content: center;
+  padding: 2rem;
+  flex-direction: column;
+  transition: 0.5s all;
+}
+.projects .project-detail {
+  color: white;
+}
+.projects.active .project-detail {
+  color: black;
+}
+.proj-0, .proj-1 {
+  width:50%;
+}
+.proj-2, .proj-3, .proj-4 {
+  width: 30%;
+}
+.proj-5, .proj-6, .proj-7, .proj-8 {
+  width: 25%;
 }
 .projects:hover {
   text-decoration: underline;
@@ -248,6 +263,13 @@ div.subtext {
   list-style: none;
   padding: 1rem;
   transition: all 0.5s;
+}
+.projects-list {
+  display: flex;
+  flex: 1 1 3px;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 .global-header nav li:hover a{
   text-decoration: underline;
@@ -285,36 +307,12 @@ div.subtext {
   padding: 1rem;
 }*/
 
-.projects-list {
-  height: 300px;
-  display: flex;
-  /*flex-direction: column;*/
-  flex-wrap: wrap;
-}
-.projects .project-detail {
-  height:0;
-  overflow: hidden;
-}
-.projects.active .project-detail {
-  /*height:300px;*/
-}
+
 p.skills-list {
   display: flex;
   flex-wrap: wrap;
 }
-/*
-.proj-0, .proj-1 {
-  /*width: 50%;*/
-  /*flex-grow: 1;*/
-/*}*/
-/*.proj-2, .proj-4 {*/
-  /*width:50%;*/
-  /*flex-grow: 2;
-}*/
-/*.proj-3, .proj-5 {*/
-  /*width: 25%;*/
-  /*flex-grow: 1;
-}*/
+
 
 @media screen and (max-width: 540px) {
   .header-text {
