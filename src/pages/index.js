@@ -4,6 +4,8 @@ import photo2 from '../components/photo2.jpg'
 import canva_desk from '../components/canva_desk.jpg';
 import Layout from '../components/layout'
 import ProjectSection from '../components/projects';
+import noun_user from '../components/noun_user.svg';
+
 
 const IndexPage = () => (
   <Layout>
@@ -44,7 +46,40 @@ const IndexPage = () => (
 
     </header>
 
-    <ProjectSection />
+    <ProjectSection title={'Some Works'} projectType={'dev'} />
+    <ProjectSection title={'Other Works (UX)'} projectType={'ux'} />
+    <section className='about'>
+      <h2>About</h2>
+      <p>Hi, I'm Misato; I like solving problems, building useful things, and helping users. I'm an avid learner, coffee afficionado, tech enthusiast, and pro-oxford comma. Here's some nice words people have said.
+      </p>
+
+        <div className='testimonial-list'>
+          <div className='testimonial'>
+            <img src={noun_user} alt=""/>
+            <p>"she was a pleasure to work with! ...her ability to apply new concepts made her a strong team member."</p>
+            <p className='testimonial-attribution'>~ Enthusiastic Supporter</p>
+          </div>
+          <div className='testimonial'>
+            <img src={noun_user} alt=""/>
+            <p>"...team player who can easily work with anyone, and motivate other team members around her"</p>
+            <p  className='testimonial-attribution'>~ Enthusiastic Supporter #2</p>
+          </div>
+          <div className='testimonial'>
+            <img src={noun_user} alt=""/>
+            <p>"...ability to absorb and apply new knowledge quickly..."</p>
+            <p  className='testimonial-attribution'>~ Enthusiastic Supporter #3</p>
+          </div>
+          <div className='testimonial'>
+            <img src={noun_user} alt=""/>
+            <p>"She's such an engineer...and too nice. You're too nice."</p>
+            <p  className='testimonial-attribution'>~ Enthusiastic Supporter #4</p>
+          </div>
+        </div>
+
+
+    </section>
+
+
   </Layout>
 )
 

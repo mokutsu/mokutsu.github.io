@@ -33,6 +33,10 @@ body {
   font-family: 'Montserrat', arial;
   font-weight: normal;
   word-wrap: break-word;
+  /*background: black;*/
+}
+main {
+  /*background: white;*/
 }
 
 .svg-container svg {
@@ -46,7 +50,7 @@ svg:not(:root) {
 
 h1, h2, h3, h4, h5, h6 {
   color: inherit;
-  font-family: 'Merriweather', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Montserrat', 'Merriweather', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   /*font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -93,6 +97,9 @@ h1, h2, h3, h4, h5, h6 {
 .intro-header {
   display: flex;
   padding-top:40px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
 }
 .header-pt {
   display: flex;
@@ -146,7 +153,7 @@ header h1 ,h2 {
     font-family: 'Megrim';
 }
 .proj {
-  border-top: 2px solid black;
+  /*border-top: 2px solid black;*/
 }
 
 .header-text-h1 {
@@ -175,13 +182,14 @@ div.subtext {
 .main-container {
   max-width: 1200px;
   margin:0 auto;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
 .stack-skill {
   border: 1px solid #eee;
   border-radius: 2px;
-  margin: 0.1rem 0.3rem;
-  padding: 0.3rem;
+  margin: 0.1rem 0.3rem 0.1rem 0;
+  padding: 0 0.2rem;
+  font-size: 0.8rem;
 }
 .img-container img {
   min-height: 100%;
@@ -214,7 +222,8 @@ div.subtext {
 .projects {
   background-color: white;
   color: black;
-  border:1px solid black;
+  /*border:1px solid black;*/
+  margin: 2px;
   flex-grow: 1;
   display: flex;
   flex-align: center;
@@ -222,15 +231,120 @@ div.subtext {
   padding: 2rem;
   flex-direction: column;
   transition: 0.5s all;
+  /*background-color: black;*/
+  background-size: cover;
+  color: white;
+  transition: all 0.5s;
+  transition-duration: 1s;
+  transform: translateX(0);
+  overflow: hidden;
+}
+.card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proj-0 {
+  /*background: url('hdLogo');*/
+}
+section.projects:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 800px;
+  height: 500px;
+  filter: blur(3px);
+  background-size: cover;
+}
+section.projects:hover:before {
+  filter: blur(0px);
+}
+#g-adventures:before {
+  background: linear-gradient(to right, rgba(71, 38, 141, 0.3), rgba(71, 38, 141, 1)), url(./thailand_beach.jpg);
+}
+#bizxpro:before {
+    background: linear-gradient(to right, rgba(205, 33, 39, 0.7), rgba(205, 33, 39, 1)), url(./network_wires.jpg);
+}
+#weatherview:before {
+  background: linear-gradient(to right, rgba(255, 110, 0, 0.7), rgba(255, 110, 0, 1)), url(./weatherapp.png);
+}
+#chris-t:before {
+  background: linear-gradient(to right, rgba(255, 191, 58, 0.7), rgba(254, 191, 58, 1)), url(./chris_portfolio.png);
+  background-size: contain;
+}
+#prior-portfolio:before {
+  background: linear-gradient(to right, rgba(24, 172, 177, 0.5), rgba(24, 172, 177, 1)), url(./old_portfolio.png);
+  background-size: contain;
+}
+#animated-backgrounds:before {
+  background: linear-gradient(to right, rgba(204, 61, 239, 0.4), rgba(204, 61, 239, 1)), url(./boxes.png);
+  background-size: contain;
+}
+#walk-this-way:before {
+  background: linear-gradient(to right, rgba(70, 130, 15, 0.6), rgba(70, 130, 15,  1)), url(./walk.jpg);
+  background-size: cover;
+}
+#the-home-depot, #wild-fork-foods, #explorit {
+  width: 30%;
+}
+#the-home-depot:before {
+  background: linear-gradient(to right, rgba(253, 117, 28, 0.6), rgba(253, 117, 28,  1)), url(./thd.jpg);
+  background-size: cover;
+}
+#wild-fork-foods:before {
+  background: linear-gradient(to right, rgba(174, 56, 66, 0.6), rgba(174, 56, 66,  1)), url(./wildforks.png);
+  background-size: cover;
+}
+#explorit:before {
+  background: linear-gradient(to right, rgba(15, 40, 39, 0.6), rgba(15, 40, 39,  1)), url(./explorit.png);
+  background-size: cover;
+}
+.card-header {
+  position:relative;
+  top:50%;
+  margin: 0 auto;
+  width: 100%;
+}
+.card-header h4 {
+  text-align: center;
+}
+.card {
+  transition: all 0.5s;
+}
+.card:hover .card.hidden {
+  transform: translateX(0);
+}
+.card:hover .card-header.hidden {
+  transform: translateX(-1000%);
+
+}
+.card.show {
+  transform: translateX(0);
+}
+.card.hidden {
+  transform: translateX(1000%);
+}
+.card-header.hidden {
+  transform: translateX(-1000%);
+}
+#bizxpro {
+  background: url(./network_wires.jpg);
+}
+#bizxpro:hover, #bizxpro:active {
+  /*background-color: rgba(205, 33, 39, 1);*/
 }
 .projects .project-detail {
-  color: white;
+  /*color: white;*/
 }
 .projects.active .project-detail {
-  color: black;
+  /*color: black;*/
+  border: none;
 }
 .proj-0, .proj-1 {
-  width:50%;
+  width:47%;
 }
 .proj-2, .proj-3, .proj-4 {
   width: 30%;
@@ -238,9 +352,14 @@ div.subtext {
 .proj-5, .proj-6, .proj-7, .proj-8 {
   width: 25%;
 }
-.projects:hover {
-  text-decoration: underline;
+h4 {
+  font-size: 1.8rem;
+  margin: 0;
+  border-bottom: 2px solid;
 }
+/*.projects:hover h4 {
+  text-decoration: underline;
+}*/
 .global-header {
   background-color: white; color: black;
   z-index: 5;
@@ -248,6 +367,9 @@ div.subtext {
   height:70px;
   transition: all 2s;
   position: fixed;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
 }
 .global-header.scrolled-header {
   color: red;
@@ -286,7 +408,7 @@ div.subtext {
   align-items: stretch;
   /*flex-flow: column;*/
 }
-.proj h2 {
+h2 {
   font-size: 4rem;
   text-align: center;
 }
@@ -312,8 +434,58 @@ p.skills-list {
   display: flex;
   flex-wrap: wrap;
 }
-
-
+.testimonial-list {
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  margin: 0 auto;
+}
+.about {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial {
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  font-size: 0.8rem;
+}
+.testimonial .testimonial-attribution {
+  font-style: italic;
+  font-size: 0.7rem;
+}
+.testimonial img {
+  width: 50%;
+  max-width: 250px;
+}
+.contact-info {
+  text-align: center;
+}
+.contact-info ul, .contact-info ul li {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 0.5rem 2rem;
+}
+footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 2px solid black;
+}
+.social-link {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 @media screen and (max-width: 540px) {
   .header-text {
     padding: 0;
