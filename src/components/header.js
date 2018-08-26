@@ -33,41 +33,36 @@ class Header extends React.Component {
           style={{
             margin: '0 auto',}}
         >
-          <h1 style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >MO</Link>
-          </h1>
           <nav>
             <ul>
 
               <li style={{ margin: 0 }}>
-                <Link
+                {/* <Link
                   to="/projects"
                   style={{
                     color: 'black',
                     textDecoration: 'none',
                   }}
                 >Works
-                </Link>
+                </Link> */}
+                <a href="#project-section">Works</a>
               </li>
 
               <li style={{ margin: 0 }}>
-                <Link
+                {/* <Link
                   to="/about"
                   style={{
                     color: 'black',
                     textDecoration: 'none',
                   }}
                 >About
-                </Link>
+                </Link> */}
+                <a href="#about">About</a>
               </li>
-
               <li style={{ margin: 0 }}>
+                <a href="#contact">Contact</a>
+              </li>
+              {/* <li style={{ margin: 0 }}>
                   <Link
                     to="/contact_page"
                     style={{
@@ -76,7 +71,7 @@ class Header extends React.Component {
                     }}
                   >Contact
                   </Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </div>

@@ -16,7 +16,7 @@ let projectList = [
     link: 'www.bizxpro.com'
   },
   {
-    name: 'WeatherView',
+    name: 'Weather Viewer',
     position: 'Student (react redux)',
     projectType: 'dev',
     stack: ['react', 'redux', 'JavaScript', 'API integration'],
@@ -55,7 +55,7 @@ let projectList = [
     position: 'UX Analyst',
     projectType: 'ux',
     stack: ['ux', 'ux strategy', 'taxonomy', 'web analytics', 'heat maps', 'ab testing'],
-    description: 'Using data to develop the ux strategy for Appliances, Kitchen, Bath sections of homedepot.ca',
+    description: 'Using data to develop the ux strategy for Appliances, Kitchen, Bath, Smart Home shopping departments of homedepot.ca',
     link: '://homedepot.ca'
   },
   {

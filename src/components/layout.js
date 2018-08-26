@@ -39,9 +39,9 @@ const Layout = ({ children, data }) => (
         </div>
         <footer className='contact-info'>
               <ul>
-                <li> <img src={unnamed} alt="" className='social-link'/><a href="//linkedin.com/in/mokutsu">mokutsu</a></li>
-                <li><img src={github} alt="" className='social-link'/><a href="//github.com/mokutsu">mokutsu</a></li>
-                <li><img src={twitter_512} alt="" className='social-link'/> <a href="//twitter.com/moktusu2">@mokutsu2</a></li>
+                <li><a href="//linkedin.com/in/mokutsu"> <img src={unnamed} alt="" className='social-link'/> <span className='social-label'>mokutsu</span></a></li>
+                <li><a href="//github.com/mokutsu"> <img src={github} alt="" className='social-link'/><span className='social-label'>mokutsu</span></a></li>
+                <li><a href="//twitter.com/mokutsu2"><img src={twitter_512} alt="" className='social-link'/> <span className='social-label'>@mokutsu2</span></a></li>
               </ul>
             </footer>
       </>

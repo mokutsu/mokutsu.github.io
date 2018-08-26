@@ -94,12 +94,19 @@ h1, h2, h3, h4, h5, h6 {
   /*justify-content: left;*/
   /*align-items: center;*/
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
 .intro-header {
   display: flex;
   padding-top:40px;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  /*-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);*/
 }
 .header-pt {
   display: flex;
@@ -149,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 .banner-img img {
   min-height: 100%;
 }
-header h1 ,h2 {
+header h1, h2 {
     font-family: 'Megrim';
 }
 .proj {
@@ -174,10 +181,11 @@ div.subtext {
   padding: 0 1rem;
 }
 .img-container {
-    width: 66%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     overflow: hidden;
+    z-index:3;
 }
 .main-container {
   max-width: 1200px;
@@ -268,7 +276,7 @@ section.projects:hover:before {
 #bizxpro:before {
     background: linear-gradient(to right, rgba(205, 33, 39, 0.7), rgba(205, 33, 39, 1)), url(./network_wires.jpg);
 }
-#weatherview:before {
+#weather-viewer:before {
   background: linear-gradient(to right, rgba(255, 110, 0, 0.7), rgba(255, 110, 0, 1)), url(./weatherapp.png);
 }
 #chris-t:before {
@@ -312,7 +320,8 @@ section.projects:hover:before {
   text-align: center;
 }
 .card {
-  transition: all 0.5s;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.56, 0.33, 0.3, 1.09);
 }
 .card:hover .card.hidden {
   transform: translateX(0);
@@ -367,9 +376,9 @@ h4 {
   height:70px;
   transition: all 2s;
   position: fixed;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  /*-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);*/
 }
 .global-header.scrolled-header {
   color: red;
@@ -378,7 +387,7 @@ h4 {
 .global-header > div {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 .global-header nav li {
@@ -411,6 +420,7 @@ h4 {
 h2 {
   font-size: 4rem;
   text-align: center;
+  padding-top: 2rem;
 }
 .main-box {
   width:100%;
@@ -486,6 +496,83 @@ footer {
   width: 1.5rem;
   height: 1.5rem;
 }
+#contact {
+  min-height: calc(100vh - 100px);
+}
+.contact-list {
+  display:flex;
+  justify-content:space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 650px) {
+  .header-text {
+    padding: 0;
+  }
+  h4 {
+    font-size: 1.3rem;
+  }
+  .projects-list {
+    flex-direction: row;
+  }
+  .proj-0, .proj-1, .proj-2, .proj-3, .proj-4, .proj-5, .proj-6, .proj-7, .proj-8,  .proj-9,  .proj-10 {
+    width: unset;
+  }
+  .projects {
+    padding: 0 0.5rem;
+  }
+  #the-home-depot, #wild-fork-foods, #explorit {
+    width: unset;
+  }
+  .testimonial-note, .testimonial-list {
+    display: none;
+  }
+  .intro-header {
+    padding-top: 40px;
+    flex-flow: column;
+    align-items: center;
+  }
+  .text-container {
+    z-index: 3;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  .header-text {
+    background: white;
+    border: 1px solid black;
+  }
+  .header-text h1 {
+      font-size: 3rem;
+  }
+  .img-container {
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 2;
+  }
+  .banner-img {
+    animation-duration: 10s;
+  }
+  .social-label {
+    display: none;
+  }
+  .contact-info ul li {
+    margin: 0.5rem 1rem;
+    padding: 0;
+  }
+  .contact-info ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 540px) {
   .header-text {
     padding: 0;
@@ -493,7 +580,5 @@ footer {
   .intro-header {
     max-height: 530px;
   }
-  .header-text h1 {
-      font-size: 4rem;
-  }
+
 }

@@ -1,11 +1,14 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+// import { Link } from 'gatsby'
 import photo2 from '../components/photo2.jpg'
-import canva_desk from '../components/canva_desk.jpg';
 import Layout from '../components/layout'
 import ProjectSection from '../components/projects';
 import noun_user from '../components/noun_user.svg';
 
+import twitter_512 from '../components/twitter_512.png';
+import github from '../components/github.jpg';
+import unnamed from '../components/unnamed.jpg';
+// import mokutsu_resume_201808 from '../components/mokutsu_resume_201808.pdf';
 
 const IndexPage = () => (
   <Layout>
@@ -45,40 +48,53 @@ const IndexPage = () => (
       </section>
 
     </header>
+    <section id="project-section">
+      <ProjectSection title={'Some Works & Projects'} projectType={'dev'}/>
+      <ProjectSection title={'Other Works (UX)'} projectType={'ux'} />
+    </section>
 
-    <ProjectSection title={'Some Works'} projectType={'dev'} />
-    <ProjectSection title={'Other Works (UX)'} projectType={'ux'} />
-    <section className='about'>
+    <section className='about' id="about">
       <h2>About</h2>
-      <p>Hi, I'm Misato; I like solving problems, building useful things, and helping users. I'm an avid learner, coffee afficionado, tech enthusiast, and pro-oxford comma. Here's some nice words people have said.
+      <div>Hi, I'm Misato; I like solving problems, building useful things, and helping users. I'm an avid learner, coffee afficionado, tech enthusiast, and staunchly pro-oxford comma. <p className='testimonial-note'>
+        Here's some nice words people have said.
       </p>
+    </div>
 
         <div className='testimonial-list'>
           <div className='testimonial'>
             <img src={noun_user} alt=""/>
             <p>"she was a pleasure to work with! ...her ability to apply new concepts made her a strong team member."</p>
-            <p className='testimonial-attribution'>~ Enthusiastic Supporter</p>
+            <p className='testimonial-attribution'>~ Tina, Walk This Way Project</p>
           </div>
+          <div className='testimonial'>
+            <img src={noun_user} alt=""/>
+            <p>"She was a great contributor to the team and a pleasure to work with!"</p>
+            <p className='testimonial-attribution'>~ Judy, BizXPro Employer</p>
+          </div>
+
           <div className='testimonial'>
             <img src={noun_user} alt=""/>
             <p>"...team player who can easily work with anyone, and motivate other team members around her"</p>
-            <p  className='testimonial-attribution'>~ Enthusiastic Supporter #2</p>
+            <p  className='testimonial-attribution'>~ Xiu, Bitmaker Classmate</p>
           </div>
-          <div className='testimonial'>
-            <img src={noun_user} alt=""/>
-            <p>"...ability to absorb and apply new knowledge quickly..."</p>
-            <p  className='testimonial-attribution'>~ Enthusiastic Supporter #3</p>
-          </div>
-          <div className='testimonial'>
-            <img src={noun_user} alt=""/>
-            <p>"She's such an engineer...and too nice. You're too nice."</p>
-            <p  className='testimonial-attribution'>~ Enthusiastic Supporter #4</p>
-          </div>
-        </div>
 
+        </div>
+        <div className='resume'>
+          <p>Want something a little less fluffly?  I hear you. </p><p> Contact me to get the latest copy of my resume. Or just say hi, chat about projects, work, etc. Ya know.</p>
+        </div>
 
     </section>
 
+    <section className='contact' id="contact">
+      <h2>Contact</h2>
+        <ul className='contact-list'>
+          <li><a href="//linkedin.com/in/mokutsu" target="_blank" rel="noopener noreferrer">
+            <img src={unnamed} alt="" className='social-link contact-section'/><span>mokutsu</span></a></li>
+          <li>
+            <a href="//github.com/mokutsu"  target="_blank" rel="noopener noreferrer"><img src={github} alt="" className='social-link contact-section'/><span>mokutsu</span></a></li>
+          <li><a href="//twitter.com/mokutsu2"  target="_blank" rel="noopener noreferrer"><img src={twitter_512} alt="" className='contact-section social-link'/> <span>@mokutsu2</span></a></li>
+        </ul>
+    </section>
 
   </Layout>
 )

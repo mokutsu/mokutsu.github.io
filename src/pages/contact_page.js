@@ -10,7 +10,7 @@ const ContactPage = () => (
       <ul>
         <li>twitter:</li> <a href="https://twitter.com/mokutsu2">@mokutsu2</a>
         <li>LinkedIn:</li> <a href="https://linkedin.com/in/mokutsu">https://linkedin.com/in/mokutsu</a>
-        <li>Github:</li> <a href="https://github.com/moktusu">mokutsu</a>
+        <li>Github:</li> <a href="https://github.com/mokutsu">mokutsu</a>
       </ul>
     </main>
   </Layout>

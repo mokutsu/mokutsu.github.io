@@ -52,7 +52,7 @@ class ProjectSection extends React.Component {
           link: 'see project section'
         },
         {
-          name: 'WeatherView',
+          name: 'Weather View',
           position: 'Student (react redux)',
           stack: ['react', 'redux', 'JavaScript', 'API integration'],
           description: 'Developed a mini application charting weather in several cities using react, redux, and open weather API for Stephen Girder\'s react redux course.'
