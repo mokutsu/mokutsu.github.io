@@ -2,11 +2,13 @@ module.exports = {
   siteMetadata: {
     title: 'Misato Website',
   },
+  pathPrefix: `/mokutsu.github.io`,
   plugins: ['gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
+          `Megrim`,
           `Montserrat`,
           `Merriweather`,
           `roboto`,
